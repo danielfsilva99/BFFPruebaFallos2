@@ -19,7 +19,7 @@ namespace BFFPruebaFallos2.Controllers
             empresaDeServicioRepositorio = new EmpresaDeServicioRepositorio();
         }
 
-        [HttpGet]
+        [HttpGet("{clienteId}")]
         public async Task<List<EmpresaPagoDeServicioEntidad>> GetComprasCliente()
         {
             var clientes = await empresaDeServicioRepositorio.ConsultarEmpresas();
